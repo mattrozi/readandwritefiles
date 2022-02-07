@@ -12,14 +12,20 @@ def main():
 
     outfile = open("student_avg.csv", "w")
     counter = 0
+    outfile.write("Name,Average Score \n")
 
     for record in students:
-        firstname = record[0]
-        lastName = record[2]
-        Country = record[4]
-        counter += 1
-        outfile.write(firstname + "," + lastName + "," + Country + "\n")
-    print("The total number of Customers are: " + str(counter - 1))
+        Name=record[0]
+        Score1=int(record[1])
+        Score2=int(record[2])
+        Score3=int(record[3])
+        averageScore=(Score1+Score2+Score3)//3
+        outfile.write(Name+','+str(averageScore)+'\n')
+
+
+       
 
     outfile.close()
-    infile.close()
+
+
+main()

@@ -17,8 +17,9 @@ def main():
         FirstName = record[1]
         lastName = record[2]
         Salary = record[3]
-        Bonus = record[4]
-        totalPay = (Salary * Bonus) + Salary
+        Bonus =round(int(record[3])*float(record[4]),2)
+        totalPay=format(int(Salary)+round(Bonus,2),',.2f')
+
         print(
             "First Name: "
             + FirstName
@@ -26,14 +27,18 @@ def main():
             + "Last Name: "
             + lastName
             + "\n"
-            + "Salary: "
+            + "Salary: $"
             + Salary
             + "\n"
             + "Bonus: "
-            + Bonus
+            + str(Bonus)
             + "\n"
-            + totalPay
-            + "\n"
+            +"Total Pay: $"+
+            str(totalPay)+'\n'
+
+
+    
+            
         )
 
 
