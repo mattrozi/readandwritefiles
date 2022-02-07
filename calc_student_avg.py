@@ -15,15 +15,12 @@ def main():
     outfile.write("Name,Average Score \n")
 
     for record in students:
-        Name=record[0]
-        Score1=int(record[1])
-        Score2=int(record[2])
-        Score3=int(record[3])
-        averageScore=(Score1+Score2+Score3)//3
-        outfile.write(Name+','+str(averageScore)+'\n')
-
-
-       
+        Name = record[0]
+        Score1 = int(record[1])
+        Score2 = int(record[2])
+        Score3 = int(record[3])
+        averageScore = round((Score1 + Score2 + Score3) / 3, 2)
+        outfile.write(Name + "," + str(averageScore) + "\n")
 
     outfile.close()
 
